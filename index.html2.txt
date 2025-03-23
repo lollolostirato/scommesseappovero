@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scommesse Sportive - Finto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Scommesse Fittizie</div>
+        <div class="saldo">Credito: <span id="credito">€100</span></div>
+    </header>
+    
+    <main>
+        <section class="match-info">
+            <h2>Prossima Partita</h2>
+            <p><strong>APO CROCETTA</strong> vs <strong>SAN PIO V 2008</strong></p>
+            <p>Data: 24 Marzo 2025 - Ore 18:30</p>
+        </section>
+        
+        <section class="scommesse">
+            <h2>Scommesse Disponibili</h2>
+            <div class="quote">
+                <div class="quota">
+                    <span>1 (APO CROCETTA)</span>
+                    <button onclick="piazzaScommessa(12.00, 'Vittoria APO')">12.00</button>
+                </div>
+                <div class="quota">
+                    <span>X (Pareggio)</span>
+                    <button onclick="piazzaScommessa(6.50, 'Pareggio')">6.50</button>
+                </div>
+                <div class="quota">
+                    <span>2 (SAN PIO V 2008)</span>
+                    <button onclick="piazzaScommessa(1.10, 'Vittoria SAN PIO')">1.10</button>
+                </div>
+            </div>
+            <div class="quote-extra">
+                <h3>Under/Over</h3>
+                <button onclick="piazzaScommessa(1.35, 'Over 3.5')">Over 3.5 (1.35)</button>
+                <button onclick="piazzaScommessa(3.50, 'Under 3.5')">Under 3.5 (3.50)</button>
+            </div>
+        </section>
+        
+        <section class="risultati">
+            <h2>Inserisci il Risultato Finale</h2>
+            <input type="text" id="risultato" placeholder="Es. 2-1">
+            <button onclick="verificaVincita()">Conferma Risultato</button>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
